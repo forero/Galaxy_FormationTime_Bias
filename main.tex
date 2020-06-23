@@ -291,8 +291,14 @@ Friends-of-Friends (FoF) algorithm with a linking length of 0.2 times
 mean interparticle separation. 
 Subhalos were identified using SUBFIND algorithm
 \citep{2015MNAS.449...49R}. 
-\textbf{Falta la descripcion breve de la metodologia que usaron en TNG para construir
-los merger trees} 
+We use the baryonic merger trees to estimate the assembly time for the
+galaaxies.
+These trees were constructed using the SUBLINK algorithm at the
+subhalo level \citep{2015MNRAS.449...49R}.
+We follow the main branch of the tree by following back in time the
+most massive progenitor.
+We define the assembly time as the redshift $z_{for}$ when the
+galaxies has exactly half stellar mass of its final stellar mass. 
 
 We take as the stellar mass the measurement within
 twice the stellar half mass radius of each subhalo
@@ -309,9 +315,11 @@ history.
   galaxia de $10^9$ }
 
 
+
+
 Figure \ref{fig:stellar_fuction} shows the stellar mass functions for
 this sample.
-In this Figure we observe that the most massive satellite galaxy has a
+There we observe that the most massive satellite galaxy has a
 mass of $10^{12}$\Msunh.  
 We can also see that there are approximately $20$ central galaxies
 with a similar high mass. 
@@ -321,6 +329,17 @@ We impose a  minimum of $50$ galaxies in a mass bin to extract statistics.
 For this reason our results will have an upper mass limit of
 $10^{11.5}$\Msunh, even though there are galaxies in the simulation
 more massive than this value.
+
+Figure \ref{fig:stellar_to_halo} shows the stellar mass as a function
+of the DM halo mass of the host.
+The two panels split the galaxies intro centrals and satellites. 
+This shows us that centrals follow a relatively tight relationship
+between stellar mass and DM halo mass.
+On the other hand, satallite galaxies do not follow a clear trend.
+For instance, satellite galaxies with stellar masses $\approx
+10^{9}$\Msunh are hosted by halos with masses that span almost three
+orders of magnitude.
+
 
 
 
@@ -342,8 +361,6 @@ more massive than this value.
 \end{figure}
 
 
-
-
  \begin{figure*}
     \centering
     \includegraphics[width=1.8\columnwidth]{figuras/scatter_assembly.pdf}
@@ -358,19 +375,8 @@ more massive than this value.
 
 \subsection{Assembly times}
 \label{sec:assembly_times}
-To estimate the formation assembly time for central and satellite
-galaxies, we use the merger trees\footnote{baryonic merger trees}
-constructed using SUBLINK algorithm at the subhalo level available in
-IllustrinTNG database, the descendant candidates are identified for
-each subhalo as those subhalos in the next snapshot that have common
-particles with the subhalo in question, the firs progenitor is defined
-as the one 'most massive history' behind it
-\citep{2015MNRAS.449...49R}, the formation assembly time is identified
-as the redshift assembly $z_{for}$ when the galaxies has exactly half
-stellar mass of its final stellar mass. We selected galaxies with a
-mass range of $10^{9}$\Msunh $\leq M_{\star} \leq 10^{12.5}$ \Msunh as
-a result, the final data set contain 128258 to central galaxies and
-89725 to satellite galaxies. We referred galaxies are "youngest" as
+
+
 recent galaxy formation assembly, i.e., galaxies into the first
 quartile in each galaxy sub-sample and "oldest" galaxies as early
 galaxy formation assembly, i.e., in the last quartile. As expected,
