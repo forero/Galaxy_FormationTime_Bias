@@ -368,7 +368,10 @@ In what follows we dissect the assembly time distribution into
 early/late assembly and quantify to what extend those differences are
 translated into clustering.
 We define early assembly as a galaxy with a formation redshift in the
-first quartile of assembly time distributions at a fixed mass.
+first quartile of assembly time distributions; late
+assembly correspond to the fourth quartile.
+The formation time distribution is computed in fixed mass bins and
+separately for centrals, satellites and the whole galaxy population. 
 
 
 \section{Results}
@@ -378,58 +381,18 @@ first quartile of assembly time distributions at a fixed mass.
  \begin{figure*}
     \centering
     \includegraphics[width=1.8\columnwidth]{figuras/scatter_assembly.pdf}
-    \caption{Comparison of the spatial distribution of \emph{early} and \emph{late} assembling galaxies.
-    The galaxies included in the plot have stellar masses around $10^{10}$\Msunh. 
-    Each panel projects all the galaxy positions over the $x$-$y$ plane. 
-    The split between \emph{late} and \emph{early} corresponds to the first and fourth quartile in the redshift assembly distribution for all galaxies with the same mass.
+    \caption{Comparison of the spatial distribution of \emph{early}
+      and \emph{late} assembling galaxies. 
+    The galaxies included in the plot have stellar masses around
+    $10^{10}$\Msunh.  
+    Each panel projects all the galaxy positions over the $x$-$y$
+    plane.  
+    The split between \emph{late} and \emph{early} corresponds to the
+    first and fourth quartile in the redshift assembly distribution
+    for all galaxies with the same mass. 
     Each panel has $\sim7$k galaxies. }
     \label{fig:comparison}
 \end{figure*}
-
-
-\subsection{Assembly times}
-\label{sec:assembly_times}
-
-
-
-
-
-In fig \ref{fig:comparison}, we provide a visual impression of galaxy
-distribution of early assembly galaxies (older galaxies) and late
-assembly galaxies (younger galaxies). It is clear that galaxies that
-early assembly tends to be located in clusters to be more tightly
-clustered than its late-assembly counterparts. 
-
-
-
-%%%%%Galaxy bias
-\subsection{Galaxy Bias}
-To quantify the galaxy clustering, we estimate the relative galaxy
-bias by taking the ratio of the 2-point correlation function of two
-samples: 
-%
-\begin{equation}
-b_r(r, S|A)= \frac{\xi_S(r)}{\xi_A(r)}, 
-\label{eq:relative}
-\end{equation}
-%
-where $\xi_A$ corresponds to the correlation function from a general
-sample $A$ that includes all the galaxies in a fixed stellar mass bin,
-while $\xi_S$ is the correlation function computed for a sub-sample,
-$S$, of galaxies in $A$. In this paper the sub-samples are built by
-taking the first and last quartile in the distributions of redshift
-assembly. 
-
-In fig \ref{fig:galaxy_bias}, we present the relative galaxy bias as a
-function of stellar mass for central, satellites, and all galaxies
-separately. The relative bias for early assembly galaxies (older
-galaxies) is higher in comparison with the later assembly galaxies
-(younger galaxies) however, as the mass increases for older galaxies
-the relative bias tends to decreases, on the other hand, for the
-younger population of galaxies the relative bias tend to stay almost
-constant especially for all and central galaxies, for satellite
-galaxies this trend continues up to transitional mass for both older
-and younger populations. 
 
 \begin{figure*}
     \centering
@@ -440,10 +403,74 @@ and younger populations.
     \label{fig:galaxy_bias}
 \end{figure*}
 
-%%%Conclusions
+
+Figure \ref{fig:comparison} provides a qualitative summary of the main
+result in this Letter.
+The points are all galaxies (centrals and satellites combined) 
+within the same mass bin around $10^{10}$\Msunh. 
+These galaxies are split into early (younger) and late (older)
+assembly. 
+Galaxies with early assembly tend to be clustered more tightly
+clustered than its late-assembly counterparts.
+
+Following Figure \ref{fig:median_assembly} one can see that most of the early
+assembling galaxies should be satellites while most of the late
+assembling galaxies are centrals. 
+One could think that the different clustering pattern could be
+explained given that one is taking a look at centrals versus
+satellites. 
+However, in what follows we show that the assembly/clustering trend also
+holds separately for satellites and centrals.  
+
+
+To quantify the changes in galaxy clustering we estimate the relative
+galaxy bias by taking the ratio of the 2-point correlation function of two
+samples: 
+%
+\begin{equation}
+b_r(r, S|A)= \frac{\xi_S(r)}{\xi_A(r)}, 
+\label{eq:relative}
+\end{equation}
+%
+where $\xi_A$ corresponds to the correlation function from a general
+sample $A$ that includes all the galaxies in a fixed stellar mass bin,
+while $\xi_S$ is the correlation function computed for a sub-sample,
+$S$, of galaxies in $A$. 
+In our case the sub-samples are built from either the first and last
+quartile in the redshift assembly distribution. 
+We compute the correlation function in the separation range of
+$5$\Mpch\ to $10$\Mpch\ split into $10$ linearly spaced bins. 
+The relative bias is computed from the median over those separation bins.
+We associate an error bar to the relative bias from the standard
+deviation over the same separation bins.
+
+
+Figure \ref{fig:galaxy_bias} summarizes the main quantitative results
+of our Letter.
+There we present the relative galaxy bias as a
+function of stellar mass for central, satellites, and all galaxies
+separately. 
+The relative bias for early assembly galaxies is higher in comparison
+with the later assembly galaxies.
+The clustering difference between early and late assemblying galaxies
+is more pronounced towards lower masses.
+
+Both for satellites and centrals, for masses aaround
+$10^{9}$\Msunh\ the amplitude of the correlation function for
+late/early assemblying galaxies change by a factor of two with respect
+to the reference galaxy sample. 
+However, as the mass increases the relative bias goes to unity.
+
+
+
 \section{Discussion and conclusions}
 \label{sec:conclu}
-In this letter, we used the cosmological hydro-dynamical simulation IllustrisTNG300-1 to study how the clustering of galaxies depends and formation galaxy time (assembly stellar) for central and satellite galaxies with a stellar mass in the range $10^{9}$\Msunh $\leq M_{\star} \leq 10^{12.5}$.
+In this letter, we used the cosmological hydro-dynamical simulation
+IllustrisTNG300-1 to study how the clustering of galaxies depends and
+formation galaxy time (assembly stellar) for central and satellite
+galaxies with a stellar mass in the range $10^{9}$\Msunh $\leq
+M_{\star} \leq 10^{12.5}$. 
+
 %In this letter, we used the cosmological hydro-dynamical simulation
 %IllustrisTNG300-1 to study the galaxy clustering dependence on
 %assembly stellar mass in galaxies with a stellar mass in the range
@@ -458,21 +485,68 @@ In this letter, we used the cosmological hydro-dynamical simulation IllustrisTNG
 
 
 
-In fig \ref{fig:comparison}, we present the distribution of early assembly stellar mass (older galaxies) and late assembly stellar mass (younger galaxies) for a given stellar mass, revealing that early-assembly galaxies tend to be located in overdense regions than its late-assembly counterparts. 
-Using the two-point correlation function, we quantify the clustering towards the relative bias defined as the equation \ref{eq:relative}. In fig \ref{fig:galaxy_bias}, we present the relative bias as a function of stellar mass for all, satellites, and central galaxies separately. At fixed stellar mass older galaxies to low stellar mass tend to be more tightly clustered than its late-assembly counterpart according to e.g., \citep{Lacerna_2014}, \citep{2013MNRAS.433..515W}, \citep{2009MNRAS.394.2229Z}. We find that in all cases the relative bias is higher for older galaxies and this trend is never reversed although stronger for low stellar mass, however as the mass increases the relative bias tends to decreases up to transitional mass and the clustering strength is very similar for both older and younger satellite galaxies.
-By the other hand, in the central galaxies, the relative bias decrease up to stellar mass in range to $10^{10.75}$\Msunh $\lesssim M_\star \lesssim$ $10^{11}$\Msunh but is not possible in this range of stellar mass make a distinction between younger and older galaxies because the strength of clustering is very similar. 
-For the younger galaxies, the relative bias remains constant showing a slight increase in the stellar masses mentioned above, for galaxies above this stellar mass the relative bias increases to older galaxies, contrary to occur for satellite galaxies, the relative bias increases but immediately decreases for both younger and older populations. For all galaxies, the previous trend continues but the relative bias decreases up to $M_\star = 10^{11}$ \Msunh in this case always is possible to distinguish older to younger galaxies populations.
+In fig \ref{fig:comparison}, we present the distribution of early
+assembly stellar mass (older galaxies) and late assembly stellar mass
+(younger galaxies) for a given stellar mass, revealing that
+early-assembly galaxies tend to be located in overdense regions than
+its late-assembly counterparts.  
+Using the two-point correlation function, we quantify the clustering
+towards the relative bias defined as the equation
+\ref{eq:relative}. In fig \ref{fig:galaxy_bias}, we present the
+relative bias as a function of stellar mass for all, satellites, and
+central galaxies separately. At fixed stellar mass older galaxies to
+low stellar mass tend to be more tightly clustered than its
+late-assembly counterpart according to e.g., \citep{Lacerna_2014},
+\citep{2013MNRAS.433..515W}, \citep{2009MNRAS.394.2229Z}. We find that
+in all cases the relative bias is higher for older galaxies and this
+trend is never reversed although stronger for low stellar mass,
+however as the mass increases the relative bias tends to decreases up
+to transitional mass and the clustering strength is very similar for
+both older and younger satellite galaxies. 
+By the other hand, in the central galaxies, the relative bias decrease
+up to stellar mass in range to $10^{10.75}$\Msunh $\lesssim M_\star
+\lesssim$ $10^{11}$\Msunh but is not possible in this range of stellar
+mass make a distinction between younger and older galaxies because the
+strength of clustering is very similar.  
+For the younger galaxies, the relative bias remains constant showing a
+slight increase in the stellar masses mentioned above, for galaxies
+above this stellar mass the relative bias increases to older galaxies,
+contrary to occur for satellite galaxies, the relative bias increases
+but immediately decreases for both younger and older populations. For
+all galaxies, the previous trend continues but the relative bias
+decreases up to $M_\star = 10^{11}$ \Msunh in this case always is
+possible to distinguish older to younger galaxies populations. 
 
-Finally, we found clear evidence for assembly bias on central/satellite galaxies in favor of $M_star \leq 10^{10.5}$\Msunh, as we show in fig \ref{fig:galaxy_bias} and fig \ref{fig:median_assembly}, the younger galaxies tend to be in regions that look almost uniform while the older galaxies tend to habit in overdense regions. We find a transitional stellar-mass indicating especially in central galaxies not is possible to distinguish between older or younger galaxies. 
-To conclude worth noting, that the central and satellite galaxies evolve in different ways, however, the relationship age-clustering is the same, i.e, older galaxies prefer overdense regions than younger galaxies so that the galaxy properties should depend significantly on the assembly history of their haloes, the old haloes follow the large-scale cosmic web quite closely, while the distribution of young haloes looks almost uniform.
+Finally, we found clear evidence for assembly bias on
+central/satellite galaxies in favor of $M_star \leq 10^{10.5}$\Msunh,
+as we show in fig \ref{fig:galaxy_bias} and fig
+\ref{fig:median_assembly}, the younger galaxies tend to be in regions
+that look almost uniform while the older galaxies tend to habit in
+overdense regions. We find a transitional stellar-mass indicating
+especially in central galaxies not is possible to distinguish between
+older or younger galaxies.  
+To conclude worth noting, that the central and satellite galaxies
+evolve in different ways, however, the relationship age-clustering is
+the same, i.e, older galaxies prefer overdense regions than younger
+galaxies so that the galaxy properties should depend significantly on
+the assembly history of their haloes, the old haloes follow the
+large-scale cosmic web quite closely, while the distribution of young
+haloes looks almost uniform. 
 %%%%%%%%%%%%%%%%%%%%%%%
 
 %Fig. \ref{fig:figure3} shows that while the  mass increases the bias factor also grows (it is not linear), but for a lowest mass galaxies the bias factor is small for young galaxies than for the older ones. 
-%However, as the mass increases, this difference in the bias factor become smaller and for a larger mass can not be distinguished the time of formation  of the galaxy by the bias. This is not only seen for the Illustris TNG300-1 simulation this fact is repeated in all simulations as we can seen in fig. \ref{fig:figure1}. In fig. \ref{fig:figure5} it is clearly seen 
+%However, as the mass increases, this difference in the bias factor
+%become smaller and for a larger mass can not be distinguished the
+%time of formation  of the galaxy by the bias. This is not only seen
+%for the Illustris TNG300-1 simulation this fact is repeated in all
+%simulations as we can seen in fig. \ref{fig:figure1}. In
+%fig. \ref{fig:figure5} it is clearly seen  
 
  %Since it is plausible that galaxy properties should depend significantly on the assembly history of their haloes,
 %the old haloes follow the large-scale cosmic web quite closely, while the distribution of young haloes looks almost uniform.
-%the low mass structures are dominated by dark matter, while the larger mass structures are not expected to have high dark matter content.
+%the low mass structures are dominated by dark matter, while the
+%larger mass structures are not expected to have high dark matter
+%content. 
 
 
 
