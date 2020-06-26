@@ -61,7 +61,8 @@
 
 % Title of the paper, and the short title which is used in the headers.
 % Keep the title short and informative.
-\title[Galaxy Assembly Bias]{The Assembly Time Dependence of Galaxy Clustering}
+\title[Galaxy Assembly Bias]{Measuring galaxy assembly bias in IllustrisTNG}
+
 
 % The list of authors, and the short list which is used in the headers.
 % If you need two or more lines of authors, add an extra line using \newauthor
@@ -92,7 +93,9 @@ $^{2}$Departamento de F\'isica, Universidad de los Andes, Cra. 1 No.
     We use a high resolution cosmological hydro-dynamical simulation
     to investigate stellar mass assembly 
     and its impact on clustering at $z=0$.
-    Using the merger trees for galaxies in the range $10^{9}$\Msunh $\leq M_{\star} \leq 10^{12.5}$ \Msunh we first find a transition mass of $10^{10.5}$\Msunh that divides two
+    Using the merger trees for galaxies in the range $10^{9}$\Msunh
+    $\leq M_{\star} \leq 10^{11.5}$ \Msunh we first find a transition
+    mass of $10^{10.5}$\Msunh that divides two 
     correlation regimes between assembly time and stellar mass.
     Above that mass, late assembly times correlate with more massive
     galaxies; below that mass late assembly correlates with less massive
@@ -122,143 +125,130 @@ keyword1 -- keyword2 -- keyword3
 
 \section{Introduction}
 In the Standard Cosmological Model, Lambda Cold Dark Matter
-($\Lambda$CDM) galaxies evolve inside dark matter (DM) halos.
-DM halos form through gravitational and grow through successive
-mergers.
-The physical properties of the galaxies are in turn determined by
-cooling and condensation of gas within of halos and mergers with
-another galaxies.
-
-The clustering properties of halos are mainly dependent on their mass.
-i.e., more massive halos are more clustered than
-less massive halos \citep{1984ApJ...284L...9K}.
-\cite{2005MNRAS.363L..66G} used N-body simulations to show that at
-fixed halo mass halos that assembly early are clustered more strongly
+($\Lambda$CDM) the clustering properties of DM halos are mainly
+dependent on their mass \citep{1984ApJ...284L...9K}.
+\cite{2005MNRAS.363L..66G} used N-body simulations to show that, at
+fixed halo mass, halos that assembly early are clustered more strongly
 than halos with a late assembly.
-They also showed that this effect is stronger for lower masses.
-This effect is known as assembly halo bias.
+Since then, it has been shown extensibly that DM halos of fixed mass cluster
+differently depending on their formation history and internal
+structure \citep{2006ApJ...652...71W,2008ApJ...687...12D}.
+This effect is known as halo assembly bias.
 
-In terms the galaxy-halo relationship the Halo Occupation Distribution
-model (HOD) is used to explain the observed effects of different types
-of galaxies towards the conditional distribution function
-$P(N_G|M_H)$, this statistical connection ignores the possibility that
-galaxy properties may be correlated with halo properties different to
-halo mass, i.e., this model assumes that halo mass alone suffices to
-determine the physical properties of halo inner galaxy population,
-however, recent studies have been shown additional dependencies to
-time halo formation such as spin, shape, velocity dispersion and
-concentration, commonly referred as secondary halo assembly bias, in
-terms of galaxy-halo relationship, the dependence on galaxy clustering
-on the secondary assembly halo bias is yet subject of discussion, to
-this relationship usually refereed as galaxy assembly bias. 
+By inheritance, galaxy clustering properties should not only depend on
+the DM halo mass but also on the halo formation history and internal
+properties.
+This influence of halo assembly bias on galaxy clustering, sometimes known as
+secondary bias, has been extensibly quantified with semi-analytic models 
+\citep{2007MNRAS.374.1303C,2014ApJ...794...74J,2019MNRAS.484.1133C}
+and hydrodynamical simulations \citep{2018MNRAS.480.3978A,2020MNRAS.tmp.1844M}
 
-From the observational point of view, \citet{Lacerna_2014} find in
-SSDS a fixed halo mass $\approx 10^{12}$\Msunh central
-galaxies show a weak but significant dependence of clustering
-amplitude with the age, i.e, old central galaxies have a higher
-clustering that young central galaxies also found in its mock catalog,
-similarly \citet{2016PhRvL.116d1301M} show present significant
-evidence of halo assembly bias for SDSS based on weak lensing signals
-to two samples of very similar halo mass of $M_{200}\approx 1.9\times
-10^{14}h^{-1}M_\odot$, 
+The observational detection of halo assembly bias is difficult.
+That requires estimating the DM halo mass and its formation history.
+from galaxy observables.
+This usually involves two difficult and uncertain steps.
+First, implementing a grouping algorithm (to estimate the DM halo
+mass). 
+Second, finding good galaxy proxies to approximate the DM halo
+formation history.   
 
-
-On the other hand \citet{2016ApJ...819..119L} do not find convincing
-evidence for formation bias. They use a sample with an DM
-halo mass of $\approx 10^{12}$\Msunh estimated via lensing. The
-classification into early and late forming was from from the inferred
-SFH of the central galaxies.
-
-\citet{2019MNRAS.485.1196Z} found that is not possible to rule out
-galaxy assembly bias. Their methodology is based in an HOD analysis
-that populates a DM only simulation in order to match clustering
-observations from SDSS DR7. The HOD model that includes galaxy
-assembly bias improves the fits to the observational data.
-
-\cite{2020MNRAS.tmp.1844M} used the IllustrisTNG300 simulation to show
-that central galaxies present a different clustering signal when split
-into DM halos with different formation times. 
-A similar signal is present when the central galaxies are split by
-stellar mass, colour, specific starf formatio rate, surface density
-and galaxy size. 
-They report the changes in the galaxy bias as a function of the DM
-halo mass.
+This difficulty is illustrated by the following example.
+\citet{Lacerna_2014} used a group catalogue based on SSDS DR4
+to study DM halo masses around $\approx 10^{12}$\Msunh. 
+They found that central galaxies in those groups have weak but
+significant dependence of clustering amplitude with the mean stellar
+age age, i.e, older galaxies had a clustering larger than younger
+galaxies. This was interpreted as a detection of halo formation bias.
+Later, \citet{2016ApJ...819..119L} also to studies DM halos with a
+mass of $\approx 10^{12}$\Msunh. 
+They used a group catalog based on SDSS DR7 data  and estimated the DM
+mass estimated via lensing.
+The classification into early and late forming was done using  the
+inferred SFH of the central galaxies in the groups.  
+They concluded that thy cannot find convincing evidence for halo
+formation bias.  
 
 
+Many other approaches have been tried.
+For instance, \citep{2016PhRvL.116d1301M} estimated cluster masses using weak lensing and
+assembly times from the average member galaxy separation to the cluster center. 
+From this data they found observational evidence of halo assembly bias
+for clusters of massses $1.9\times 10^{14}h^{-1}M_\odot$.
+\citep{2018MNRAS.478.4487T} tried insted to quantify to what extent
+galaxy assembly and halo assembly are correlated.
+Based on group finding algorithms on SDSS data and matching against DM only N-body simulations,
+they claim that those correlations can be detected for central
+galaxies with stellar masses larger than $10^{10}$\Msunh.
+More recently, \citep{2019MNRAS.485.1196Z} used Halo Occupation
+Distribution (HOD) analysis to populates a DM only simulation in order
+to match clustering observations from SDSS DR7. 
+Although they do not provide a detection of assembly bias by directly
+comparing clustering of different samples, 
+the HOD model that includes galaxy assembly bias improves the fits to
+the observational data. 
 
 
-In the context of the galaxy quenching the
-models predict a strong correlation between a fraction quenched and
-large scale density environment, using central galaxies $M_{\star}
-\gtrsim 10^{10}M_\odot h^{-2}$ in SDSS \citet{2017MNRAS.472.2504T}
-show that the halo formation history has a small but statistically
-significant impact on quenching of star formation at high masses,
-while the process in low-mass central galaxies is uncorrelated with
-halo formation history, \citet{2016MNRAS.457.4360Z} using clustering
-and galaxy-galaxy lensing of red and blue galaxies in SDSS find that
-the halo quenching model provides more fitting to the galaxies above
-$10^{11}M_\odot h^{-2}$, predicting the average halo mass of red and
-blue central galaxies although it has also been shown that quenching
-process has a limited correlation with halo formation history
-\citep{2018MNRAS.478.4487T}. 
+\citet{2013MNRAS.433..515W} performed a detection of galaxy assembly
+bias as as function of stellar mass. 
+They used galaxy groups in SDSS DR7 to split galaxies into centrals
+and satellites. For each popoulation they performed an additional
+split by specific star formation rate (sSFR) and then measure the differences
+in the projected correlation function.
+For central galaxies with stellar masses between $10^{9.77}$ and $10^{11.27}$
+the clustering in galaxies with low sSFR was $20-30$ percent higher
+than galaxies with high sSFR; the results from semianalytic models
+were consistently higher by $10$ to $30$ percentual points.
+
+
+
+
 Using hydrodynamics simulations and
 N-body simulations the galaxy assembly bias effect is more visible, in
 terms of variations galaxy occupancy of the dark matter halos, halos
 at low mass ($\leq 10^{10}$\Msunh) in most dense environment and early
 formed halos expected host a central galaxy and fewer satellite
 galaxies that those in the least dense environments and late-formed
-halos \citep{2018MNRAS.480.3978A} in the galactic conformity effect
-galaxies with stellar mass $M_\star > 2\times 10^9 M_\odot$ shows a
-significant signal out to 10 Mpc \citep{2016MNRAS.455..185B}, moreover
-in Illustris simulations has been demonstrated a stronger correlation
-between the central galaxies and the peak maximum circular velocity of
-their hosting haloes
-\citep{2018arXiv181211210X}\citep{2005ApJ...630....1Z}. 
-Also, Semi Analytic models (SAM) show contradictory results, some
-studies find that the clustering of galaxies depend not only halo mass
-but also on the secondary halo properties, halo central galaxies are
-differently affected by assembly bias than are galaxies of all types
-(see, e.g., \citep{2019MNRAS.486..582P};
-\citep{2007MNRAS.374.1303C};\citep{2019MNRAS.484.1133C};
-\citep{2014ApJ...794...74J}), while authors as
-\citet{2014MNRAS.443.3044Z} conclude that the galaxy-halo relationship
+halos \citep{2018MNRAS.480.3978A} 
+
+Also, 
+
 inferred from galaxy clustering is subject to significant systematic
 errors induced by assembly bias. If the galaxy properties depend on
 the secondary properties of its parent halo it remains unclear
 especially on the observational point of view.   
 
 
-As previously we mentioned the investigations about the age-clustering
-dependence have mainly focused on halo population detecting this
-effect (assembly halo bias), i.e., oldest halos are more clustered
-than younger haloes, however, the galaxies are the tracers of
-formation structure and are used to constrain the cosmological
-parameters. Some authors focus their studies on age-clustering
-relation in galactic populations, e.g., \citet{2012A&A...539A..46A}
-study the properties of galaxy pairs in high-density environments in
-SSDS-DR7 detecting young groups and young clusters are associated with
-low-density global environments, \citet{2007MNRAS.378..777R} analyzing
-the relation between age and clustering within halo catalogs found
-that galaxies of a given velocity circular will have formed earlier if
-they lie in groups or clusters today, the other hand, using
-semi-analytic galaxy formation models and observational data at fixed
-stellar mass \citet{2013MNRAS.433..515W} predict that the clustering
+
+
 of central galaxies depends on the specific star formation rate, found
 more passive galaxies have a higher clustering amplitude, but
 \citet{Lacerna_2014} also find a weak but significant dependence of
 clustering amplitude whit the age of central galaxies in SDDS, at
 fixed halo mass they found that old galaxies show a higher clustering
-relative the young population and \citet{Berlind:2006eb} found a
-connection between halo age and central galaxy, halos that assemble
-earlier likely contain redder central galaxies than recently assembled
-halos of the same mass. The galaxy assembly bias study in this paper
-is therefore the relation between the galaxy age dependence and galaxy
-clustering. In this letter, we study the dependence of galaxy
+relative the young population.
+
+
+
+\cite{2020MNRAS.tmp.1844M} used the IllustrisTNG300 simulation to show
+that central galaxies present a different clustering signal when split
+into DM halos with different formation times. 
+A similar signal is present when the central galaxies are split by
+stellar mass, colour, sSFR, surface density
+and galaxy size. 
+They report clear changes in the relative clustering as a function of
+the DM halo mass.
+
+\textbf{Para discutir. Low mass clustering driven by changes in the Halo Mass}
+
+In this letter, we study the dependence of galaxy
 clustering on galaxy assembly for central and satellite galaxies using
 the cosmological hydro-dynamical simulation Illustris TNG300-1. In
 this way, the definition for galaxy assembly bias indicates the
 dependence of galaxy clustering on a secondary galactic property as
 the assembly time. 
+
+\citep{2018MNRAS.475..676S} overall clustering measurements in
+IllustrisTNG. 
 
 The outline of this letter is as follows, in section \ref{sec:simul}
 we describe the IllustrisTNG300-1 simulations. In section
