@@ -235,7 +235,7 @@ clustering dependence on assembly time.
 Finally, we close by discussing these results in Section \ref{sec:conclu}. 
 
 
-\section{Simulated Galaxy Sample}
+\section{Simulated galaxy sample and its assembly times}
 \label{sec:simul} % used for referring to this section from elsewhere
 
 In this Letter we use public data from the IllustrisTNG project
@@ -278,7 +278,7 @@ mass $3.98 \times 10^7$ \Msunh, the gas cells have a mass of $1
      \includegraphics[width=1\columnwidth]{figuras/his2_centrales.pdf}
     \includegraphics[width=1\columnwidth]{figuras/his2_satelite.pdf}
     \caption{Relationship between stellar mass and the parent dark
-      matter halo mass.} 
+      matter halo mass for central and satellite galaxies.} 
     \label{fig:stellar_to_halo}
 \end{figure}
 
@@ -297,24 +297,18 @@ mass $3.98 \times 10^7$ \Msunh, the gas cells have a mass of $1
 In the simulation the DM halos were identified using the
 Friends-of-Friends (FoF) algorithm with a linking length of 0.2 times
 mean interparticle separation. 
-Subhalos were identified using SUBFIND algorithm
-\citep{2015MNAS.449...49R}. 
+Subhalos and galaxies were identified using SUBFIND algorithm.
 We use the baryonic merger trees to estimate the assembly time for the
 galaaxies.
 These trees were constructed using the SUBLINK algorithm at the
 subhalo level \citep{2015MNRAS.449...49R}.
 
-We extract the main branch of the tree by following back in time the
-most massive progenitor.
-We use this main branch to define the assembly time as the redshift
-$z_{for}$ when the galaxy in the branch has exactly half stellar mass
-of its final stellar mass.  
-
 We take as the stellar mass the measurement within
 twice the stellar half mass radius of each subhalo
 \citep{2018MNRAS.475..676S}.
-We only use galaxies with stellar masses (at $z=0$) larger than
-$10^{9}$\Msunh,   with this selection we end up with 128258 centrals
+We only use galaxies with stellar masses at $z=0$ greater than
+$10^{9}$\Msunh.
+With this selection we end up with close to 128 thousand centrals
 and  satellites.
 This allows us to have galaxies with a well resolved formation
 history. 
@@ -323,17 +317,25 @@ history.
 \textbf{Cuantas particulas estelares aproximadamente tienen una
   galaxia de $10^9$ ?} 
 
+We extract the main branch of the tree by following back at every
+snapshot the most massive progenitor.
+We use this main branch to define the assembly time as the redshift
+$z_{f}$ at which the galaxy in the branch has exactly half stellar mass
+of its stellar mass at $z=0$.  
+
 
 Figure \ref{fig:stellar_fuction} shows the stellar mass functions for
 this sample.
-There we observe that the most massive satellite galaxy has a
-mass of $10^{12}$\Msunh.  
-We can also see that there are approximately $20$ central galaxies
-with a similar high mass. 
-In the results we are going to present next we compare centrals and
-satellites. 
-We impose a  minimum of $50$ galaxies in a mass bin to extract statistics. 
-For this reason our results will have an upper mass limit of
+There we observe that the most massive satellite galaxy has a stellar
+mass of $\approx 10^{12}$\Msunh.    
+We note that there are approximately $20$ central galaxies
+with a similar mass.
+In this Letter we measure correlations functions on central and
+satellites in different mass bins.
+For this reason we impose a  minimum of $1000$ galaxies
+in a mass bin of $0.25$ dex in width to have a reasonable
+measurement. 
+This results in having an an upper mass limit of
 $10^{11.5}$\Msunh, even though there are galaxies in the simulation
 more massive than this value.
 
@@ -350,24 +352,24 @@ orders of magnitude.
 Figure \ref{fig:median_assembly} summarizes the trends for the
 assembly times as a function of mass for central and satellite
 galaxies.
-We first see that central galaxies have a systematic latter assembly
-compared to satellite galaxies.
-Apart from the normalization, the trends are similar for centrals and
-satellites.
-The treds is marked by a "transitional stellar mass" around 
-$M_\star
-10^{10.5}$ \Msunh.
-Above that transition massive galaxies assembly late, below that
-treshold more massive galaxies assembly early.
+From that Figure we see that, at fixed stellar mass, central galaxies
+assembly later than  satellite galaxies.
+
+Apart from this systematic offset the trend with stellar mass is
+similar for centrals and satellites.
+The main trend is characterized by a transitional stellar mass around 
+$M_\star 10^{10.5}$ \Msunh.
+This stellar mass presents the earliest assembly times.
+Above that mass, more massive galaxies assembly later and below
+more massive galaxies assembly earlier.
+
 
 In what follows we dissect the assembly time distribution into
-early/late assembly and quantify to what extend those differences are
-translated into clustering.
-We define early assembly as a galaxy with a formation redshift in the
-first quartile of assembly time distributions; late
-assembly correspond to the fourth quartile.
-The formation time distribution is computed in fixed mass bins and
-separately for centrals, satellites and the whole galaxy population. 
+early/late assembly and quantify to what extent those differences are
+translated into different clustering regimes.
+Eearly assemblying galaxies fall into the quartile with the highest
+assembly redshifts while late assemblying galaxies fall into the
+quartile with the lowest assebly redshifts.
 
 
 \section{Clustering dependence on assembly time}
