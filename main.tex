@@ -242,30 +242,33 @@ In this Letter we use public data from the IllustrisTNG project
 \url{https://www.tng-project.org/}. 
 We use the results from the simulation labeled as TNG300-1.
 This simulation was performed with the AREPO code
-\citep{2018MNRAS.473.4077P} that solves gravitaional and
+\citep{2018MNRAS.473.4077P} that solves gravitational and
 magnetohydrodynamical physics.
-The simulation also implements sub-resolution physics to describe the
+The simulation implements sub-resolution physics to describe the
 processes related to star formation, black hole growth and their
 associated feedback processes.
-The used cosmological parameters are $\Omega_m=0.38089$,
+The cosmological parameters in the simulation were $\Omega_m=0.38089$,
 $\Omega_b=0.0486$, $\Omega_\Lambda= 0.6911$ and $h=0.6774$ consistent
-with Planck2015 \citep{2016A&A...594A..13P}. 
+with Cosmic Microwave Background measurements from the Planck satellite
+\citep{2016A&A...594A..13P}.  
 
 TNG300-1 is a simulation performed on a cubic volume
 with  $205$ \Mpch on a side.
 It follows the evolution of $2500^3$ DM computational particles of
-mass $3.98 \times 10^7$ \Msunh, $2500^3$ gas tracer particles of average gas cell mass of $7.44 \times 10^6 \Msunh $ , $11.46 \times 10^6$ dark matter haloes and $1.21 \times 10^6$ galaxies. 
-\textbf{Faltan los datos que cuantifican la resolucion en la
-  descripcion del gas y de las estrellas.}
+mass $3.98 \times 10^7$ \Msunh, the gas cells have a mass of $1
+\times 10^7$ \Msunh on average.
 
 
 
 \begin{figure}
     \centering
     \includegraphics[width=1\columnwidth]{figuras/Histogramas.pdf}
-    \caption{Stellar mass functions for all galaxies and the partition
-      into centrals and satellites. We focus our study in the stellar
-      mass range presented in this plot.} 
+    \caption{Stellar mass functions for all galaxies and their partition
+      into centrals and satellites. 
+    Although, the mass resolution in TNG300-1 resolves individual
+    galaxies below $10^{9}$ \Msunh, we use this values threshold because
+    it is the minimum value at which the \emph{formation history}
+    along the main branch can be resolved.}
     \label{fig:stellar_fuction}
 \end{figure}
 
@@ -273,7 +276,7 @@ mass $3.98 \times 10^7$ \Msunh, $2500^3$ gas tracer particles of average gas cel
 \begin{figure}
     \centering
      \includegraphics[width=1\columnwidth]{figuras/his2_centrales.pdf}
-    \includegraphics[width=0.9\columnwidth]{figuras/his2_satelite.pdf}
+    \includegraphics[width=1\columnwidth]{figuras/his2_satelite.pdf}
     \caption{Relationship between stellar mass and the parent dark
       matter halo mass.} 
     \label{fig:stellar_to_halo}
@@ -383,8 +386,8 @@ separately for centrals, satellites and the whole galaxy population.
 
 \begin{figure*}
     \centering
-    \includegraphics[width=1.8\columnwidth]{figuras/scatter_assembly.pdf}
-    \includegraphics[width=1.8\columnwidth]{figuras/scatter_ssfr.pdf}
+%    \includegraphics[width=1.8\columnwidth]{figuras/scatter_assembly.pdf}
+%    \includegraphics[width=1.8\columnwidth]{figuras/scatter_ssfr.pdf}
     \includegraphics[width=1.8\columnwidth]{figuras/scatter_color.pdf}
     \caption{Comparison of the spatial distribution of \emph{early}
       and \emph{late} assembling galaxies. 
