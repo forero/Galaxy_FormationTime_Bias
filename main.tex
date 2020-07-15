@@ -71,7 +71,8 @@ Y. Camargo,$^{1}$\thanks{E-mail: mn@ras.org.uk}
 J. E. Forero-Romero,$^{2}$\thanks{E-mail: je.forero@uniandes.edu.co}
 \\
 % List of institutions
-$^{1}$Universidad Nacional de Colombia, Bogot\'a, Colombia\\
+$^{1}$
+Departamento de F\'isica, Universidad Nacional de Colombia - Sede Bogot\'a, Av. Cra 30 No 45-03, Bogot\'a, Colombia\\
 $^{2}$Departamento de F\'isica, Universidad de los Andes, Cra. 1 No.
 18A-10, Edificio Ip, Bogot\'a, Colombia\\
 }
@@ -164,7 +165,8 @@ inferred SFH of the central galaxies in the groups.
 They concluded that thy cannot find convincing evidence for halo
 formation bias.  
 
-Solving the difficult problem of detecting halo assembly bias from observations has been tackled with many different approaches.
+Solving the difficult problem of detecting halo assembly bias from
+observations has been tackled with many different approaches. 
 An exhaustive list is beyond the reach of this introduction.
 However, the following examples  help us to gauge the diversity of techniques.
 \citet{2016PhRvL.116d1301M} estimated cluster masses using weak lensing and
@@ -173,9 +175,9 @@ From this data they found observational evidence of halo assembly bias
 for clusters of massses $1.9\times 10^{14}h^{-1}M_\odot$.
 \citet{2018MNRAS.478.4487T} tried insted to quantify to what extent
 galaxy assembly and halo assembly are correlated.
-Based on group finding algorithms on SDSS data and matching against DM only N-body simulations,
-they claim that those correlations can be detected for central
-galaxies with stellar masses larger than $10^{10}$\Msunh.
+Based on group finding algorithms on SDSS data and matching against DM
+only N-body simulations, they claim that those correlations can be detected for central
+galaxies with stellar masses larger than $10^{10}$\Msunh. 
 More recently, \citet{2019MNRAS.485.1196Z} used Halo Occupation
 Distribution (HOD) analysis to populates a DM only simulation in order
 to match clustering observations from SDSS DR7. 
@@ -212,9 +214,6 @@ assembly) was $20$ to $30$ percent higher than in objects with high
 sSFR (late assembly); the expected results from semianalytic models
 were consistently higher by $10$ to $30$ percentual points. 
 
-
-
-
 The work we present here follows that perspective of directly
 quantifying galaxy assembly bias.
 We use the cosmological hydro-dynamical simulation IllustrisTNG simulation,
@@ -226,7 +225,6 @@ and split the galaxies into early and late assembly.
 We also report the differences in clustering by using cuts in colour
 and specific star formation rate.
 
-
 The outline of this letter is as follows, in Section \ref{sec:simul}
 we describe the IllustrisTNG300-1 simulations, the construction of
 galaxy sample and the method to measure their assembly.
@@ -235,8 +233,8 @@ clustering dependence on assembly time.
 Finally, we close by discussing these results in Section \ref{sec:conclu}. 
 
 
-\section{Simulated galaxy sample and its assembly times}
-\label{sec:simul} % used for referring to this section from elsewhere
+\section{The galaxy samples and its assembly times}
+\label{sec:simul} 
 
 In this Letter we use public data from the IllustrisTNG project
 \url{https://www.tng-project.org/}. 
@@ -247,15 +245,14 @@ magnetohydrodynamical physics.
 The simulation implements sub-resolution physics to describe the
 star formation, black hole growth and their associated feedback
 processes. 
-The cosmological parameters in the simulation were $\Omega_m=0.38089$,
-$\Omega_b=0.0486$, $\Omega_\Lambda= 0.6911$ and $h=0.6774$ consistent
-with Cosmic Microwave Background measurements from the Planck satellite
-\citep{2016A&A...594A..13P}.  
 The simulation was performed on a cubic volume of $205$ \Mpch on a
 side, using  $2500^3$ DM computational particles of mass $3.98 \times
 10^7$ \Msunh, the gas cells have a mass of $1 \times 10^7$ \Msunh on
 average.
-
+The cosmological parameters in the simulation were $\Omega_m=0.38089$,
+$\Omega_b=0.0486$, $\Omega_\Lambda= 0.6911$ and $h=0.6774$ consistent
+with Cosmic Microwave Background measurements from the Planck satellite
+\citep{2016A&A...594A..13P}.  
 
 
 \begin{figure}
@@ -263,10 +260,10 @@ average.
     \includegraphics[width=1\columnwidth]{figuras/Histogramas.pdf}
     \caption{Stellar mass functions for all galaxies and their partition
       into centrals and satellites. 
-    Although, the mass resolution in TNG300-1 resolves individual
-    galaxies below $10^{9}$ \Msunh, we use this values threshold because
-    it is the minimum value at which the \emph{formation history}
-    along the main branch can be resolved.}
+    Although the mass resolution in TNG300-1 resolves individual
+    galaxies below $10^{9}$ \Msunh we use this value as a threshold
+    because galaxies above this mass has an appropriate resolution in
+    the formation history to estimate their assembly time.}
     \label{fig:stellar_fuction}
 \end{figure}
 
@@ -292,9 +289,6 @@ average.
 \end{figure}
 
 
-In the simulation the DM halos were identified using the
-Friends-of-Friends (FoF) algorithm with a linking length of 0.2 times
-mean interparticle separation. 
 Subhalos and galaxies were identified using SUBFIND algorithm.
 We use the baryonic merger trees to estimate the assembly time for the
 galaaxies.
@@ -302,24 +296,20 @@ These trees were constructed using the SUBLINK algorithm at the
 subhalo level \citep{2015MNRAS.449...49R}.
 
 We take as the stellar mass the measurement within
-twice the stellar half mass radius of each subhalo
-\citep{2018MNRAS.475..676S}.
+twice the stellar half mass radius of each subhalo.
 We only use galaxies with stellar masses at $z=0$ greater than
 $10^{9}$\Msunh.
-With this selection we end up with close to 128 thousand centrals
-and  satellites.
+With this selection we end up with close to 128 thousand galaxies.
 This allows us to have galaxies with a well resolved formation
-history. The median stars of galaxies with stellar mass of $10^9$\Msunh are 313 stars and we discarted 3287 galaxies of stellar mass $>10^9$\Msunh with no tree.
-\textbf{Cuantas galaxias mas masivas que $10^9$\Msun no tienen un merger
-  tree?}  
-\textbf{Cuantas particulas estelares aproximadamente tienen una
-  galaxia de $10^9$ ?} 
+history. 
+Galaxies above this treshold are resolved with at least $150$ stellar
+particles. 
 
 We extract the main branch of the tree by following back at every
 snapshot the most massive progenitor.
 We use this main branch to define the assembly time as the redshift
-$z_{f}$ at which the galaxy in the branch has exactly half stellar mass
-of its stellar mass at $z=0$.  
+at which the galaxy in the branch has exactly half of its stellar mass
+at $z=0$.   
 
 
 Figure \ref{fig:stellar_fuction} shows the stellar mass functions for
@@ -333,13 +323,13 @@ satellites in different mass bins.
 For this reason we impose a  minimum of $1000$ galaxies
 in a mass bin of $0.25$ dex in width to have a reasonable
 measurement. 
-This results in having an an upper mass limit of
+This limits translates into in having an an upper mass limit of
 $10^{11.5}$\Msunh, even though there are galaxies in the simulation
 more massive than this value.
 
 Figure \ref{fig:stellar_to_halo} shows the stellar mass as a function
 of the DM halo mass of the host.
-The two panels split the galaxies intro centrals and satellites. 
+The panels split the galaxies intro centrals and satellites. 
 This shows us that centrals follow a relatively tight relationship
 between stellar mass and DM halo mass.
 On the other hand, satallite galaxies do not follow a clear trend.
@@ -352,32 +342,32 @@ assembly times as a function of mass for central and satellite
 galaxies.
 From that Figure we see that, at fixed stellar mass, central galaxies
 assembly later than  satellite galaxies.
-
 Apart from this systematic offset the trend with stellar mass is
 similar for centrals and satellites.
 The main trend is characterized by a transitional stellar mass around 
-$M_\star 10^{10.5}$ \Msunh.
-This stellar mass presents the earliest assembly times.
-Above that mass, more massive galaxies assembly later and below
-more massive galaxies assembly earlier.
-
+$\approx 3\times 10^{10}$ \Msunh.
+This stellar mass presents the earliest assembly times, always above $z=1$.
+Above that mass, more massive galaxies assembly later; below that
+value more massive galaxies assembly earlier.
 
 In what follows we dissect the assembly time distribution into
-early/late assembly and quantify to what extent those differences are
-translated into different clustering regimes.
-Eearly assemblying galaxies fall into the quartile with the highest
-assembly redshifts while late assemblying galaxies fall into the
-quartile with the lowest assebly redshifts.
-
+early/late assembly to quantify how those differences translate into
+different clustering strenght.
+We define early assemblying galaxies as those falling into the
+quartile with the highest assembly redshifts while late assemblying
+galaxies fall into the quartile with the lowest assembly redshifts.
+In order to explore observational proxies for the assembly time we
+also split our samples into quartiles for the specific star formation
+rate (sSFR) and $(g-i)$ colour. 
 
 \section{Clustering dependence on assembly time}
 \label{sec:results}
 
 \begin{figure*}
     \centering
-    \includegraphics[width=2.0\columnwidth]{figuras/bias_galaxies.pdf}
-    \includegraphics[width=2.0\columnwidth]{figuras/ssfr_bias_galaxies.pdf}
-    \includegraphics[width=2.0\columnwidth]{figuras/color_bias_galaxies.pdf}
+    \includegraphics[width=1.8\columnwidth]{figuras/bias_galaxies.pdf}
+    \includegraphics[width=1.8\columnwidth]{figuras/ssfr_bias_galaxies.pdf}
+    \includegraphics[width=1.8\columnwidth]{figuras/color_bias_galaxies.pdf}
     \caption{Relative galaxy bias as a function of stellar mass.
     We consider separately all galaxies, satellites and centrals.
     The bias is higher for early assembling galaxies.}
@@ -388,7 +378,7 @@ quartile with the lowest assebly redshifts.
     \centering
 %    \includegraphics[width=1.8\columnwidth]{figuras/scatter_assembly.pdf}
 %    \includegraphics[width=1.8\columnwidth]{figuras/scatter_ssfr.pdf}
-    \includegraphics[width=1.8\columnwidth]{figuras/scatter_color.pdf}
+    \includegraphics[width=1.6\columnwidth]{figuras/scatter_color.pdf}
     \caption{Comparison of the spatial distribution of \emph{early}
       and \emph{late} assembling galaxies. 
     The galaxies included in the plot have stellar masses around
@@ -404,10 +394,9 @@ quartile with the lowest assebly redshifts.
 
 
 
-
-To quantify the changes in galaxy clustering we estimate the relative
-galaxy bias by taking the ratio of the 2-point correlation function of two
-samples: 
+We follow \cite{2020MNRAS.tmp.1844M} to quantify the changes in galaxy
+clustering we estimate the relative galaxy bias by taking the ratio of
+the 2-point correlation function of two samples: 
 %
 \begin{equation}
 b_r(r, S|A)= \frac{\xi_S(r)}{\xi_A(r)}, 
@@ -420,24 +409,36 @@ while $\xi_S$ is the correlation function computed for a sub-sample,
 $S$, of galaxies in $A$. 
 In our case the sub-samples are built from either the first and last
 quartile in the redshift assembly distribution. 
+
+
 We compute the correlation function in the separation range of
-$5$\Mpch\ to $10$\Mpch\ split into $10$ linearly spaced bins. 
-The relative bias is computed from the median over those separation bins.
-We associate an error bar to the relative bias from the standard
-deviation over the same separation bins.
+$5$ \Mpch\ to $10$ \Mpch\ split into $10$ linearly spaced bins. 
+The relative bias is computed over every bin.
+We report the mean value of that ratio and we associate an error bar
+to using the standard deviation over the same separation bins.
 
-
-Figure \ref{fig:galaxy_bias} summarizes the main quantitative results
-of our Letter.
+Figure \ref{fig:galaxy_bias} summarizes the main result of this Letter.
 There we present the relative galaxy bias as a
 function of stellar mass for central, satellites, and all galaxies
 separately. 
+The upper, middle and lower rows correspond to splits on the assembly
+time, specific star formation rate and colour, respectively.
 The relative bias for early assembly galaxies is higher in comparison
 with the later assembly galaxies.
 The clustering difference between early and late assemblying galaxies
-is more pronounced towards lower masses.
+is more pronounced towards lower masses below $5 \times 10^{10}$
+\Msunh.
+Above that mass the large error bars do not allow for a confident
+assesment. 
+The assembly bias holds both for satellites and centrals.
+The transitional mass below which the effect is the noticeable is in
+both cases close to $5\times 10^{10}$\Msunh.
 
-Both for satellites and centrals, for masses around
+Using the sSFR produces a similar picture but quite different in the
+details. 
+For the general galaxy population the assembly bias effect is
+noticeable for masses below $10^{10}$\Msunh;
+
 $10^{9}$\Msunh\ the amplitude of the correlation function for
 late/early assemblying galaxies change by a factor of two with respect
 to the reference galaxy sample. 
