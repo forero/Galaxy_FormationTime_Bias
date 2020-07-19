@@ -94,9 +94,10 @@ at $z=0$ with stellar masses $M_{\star} > 10^{9}$\Msunh\
 from the cosmological magnetohydrodynamic simulation IllustrisTNG. 
 We find that galaxies with stellar masses below $(6\pm 1)\times
 10^{10}$ \Msunh\ exhibit a strong assembly bias: early
-assemblying galaxies are more clustered than late assemblying galaxies.
-The effect is stronger as the stellar masses decreases and shows similar
-strenght both for centrals and satellites. 
+assemblying galaxies are more clustered on scales of $1-5$ \Mpch\ than
+late assemblying galaxies. The effect is stronger as the stellar
+masses decreases.
+The trends for centrals and satellites are similar. 
 We find that cuts in the specific star formation rate cannot reproduce
 the trends obtained with the cuts on the stellar assembly times.
 On the other hand cuts in the $(g-r)$ colours succesfully reproduce
@@ -104,6 +105,8 @@ the clustering trends from assembly time cut.
 Our results suggest that galaxies, either centrals or satellites, with
 stellar masses above $(6\pm 1)\times 10^{10}$ \Msunh\ do not show a
 strong assembly bias.    
+An observational verification of these results could be obtained with
+the upcoming Dark Energy Spectroscopic Instrument.
 \end{abstract}
 
 % Select between one and six entries from the list of approved keywords.
@@ -261,25 +264,15 @@ with Cosmic Microwave Background measurements from the Planck satellite
 \end{figure}
 
 
-\begin{figure}
+\begin{figure*}
     \centering
-     \includegraphics[width=1\columnwidth]{figuras/his2_centrales.pdf}
-    \includegraphics[width=1\columnwidth]{figuras/his2_satelite.pdf}
+     \includegraphics[width=0.9\columnwidth]{figuras/his2_centrales.pdf}
+    \includegraphics[width=0.9\columnwidth]{figuras/his2_satelite.pdf}
     \caption{Relationship between stellar mass and the parent dark
       matter halo mass for central and satellite galaxies.} 
     \label{fig:stellar_to_halo}
-\end{figure}
+\end{figure*}
 
-
-\begin{figure}
-    \centering
-    \includegraphics[width=1\columnwidth]{figuras/median_assembly.pdf}
-    \caption{Median redshift of assembly as a function of stellar mass.
-    Different symbols correspond to satellites, centrals or all galaxies.
-    The stellar mass around $10^{10.5}$\Msunh shows a transition between two 
-    regimes of \emph{upsizing} and \emph{downsizing}.}
-    \label{fig:median_assembly}
-\end{figure}
 
 
 Subhalos and galaxies were identified using SUBFIND algorithm.
@@ -356,11 +349,23 @@ rate (sSFR) and $(g-i)$ colour.
 \section{Clustering dependence on assembly time}
 \label{sec:results}
 
+
+
+\begin{figure}
+    \centering
+    \includegraphics[width=1\columnwidth]{figuras/median_assembly.pdf}
+    \caption{Median redshift of assembly as a function of stellar mass.
+    Different symbols correspond to satellites, centrals or all galaxies.
+    The stellar mass around $10^{10.5}$\Msunh shows a transition between two 
+    regimes of \emph{upsizing} and \emph{downsizing}.}
+    \label{fig:median_assembly}
+\end{figure}
+
 \begin{figure*}
     \centering
-    \includegraphics[width=1.8\columnwidth]{figuras/bias_galaxies.pdf}
-    \includegraphics[width=1.8\columnwidth]{figuras/ssfr_bias_galaxies.pdf}
-    \includegraphics[width=1.8\columnwidth]{figuras/color_bias_galaxies.pdf}
+    \includegraphics[width=1.6\columnwidth]{figuras/bias_galaxies.pdf}
+    \includegraphics[width=1.6\columnwidth]{figuras/ssfr_bias_galaxies.pdf}
+    \includegraphics[width=1.6\columnwidth]{figuras/color_bias_galaxies.pdf}
     \caption{Relative galaxy bias as a function of stellar mass.
     We consider separately all galaxies, satellites and centrals.
     The bias is higher for early assembling galaxies (upper row).
@@ -373,9 +378,9 @@ rate (sSFR) and $(g-i)$ colour.
 
 \begin{figure*}
     \centering
-    \includegraphics[width=1.6\columnwidth]{figuras/scatter_assembly.pdf}
+    \includegraphics[width=1.5\columnwidth]{figuras/scatter_assembly.pdf}
 %    \includegraphics[width=1.6\columnwidth]{figuras/scatter_ssfr.pdf}
-    \includegraphics[width=1.6\columnwidth]{figuras/scatter_color.pdf}
+    \includegraphics[width=1.5\columnwidth]{figuras/scatter_color.pdf}
     \caption{Comparison of the spatial distribution of galaxies with 
       \emph{early}/\emph{late} assembly and \emph{red}/\emph{blue}
       $(g-r)$ colours.
@@ -455,33 +460,45 @@ red/blue galaxies.
 \label{sec:conclu}
 
 In this Letter we used an state-of-the-art hydro-dynamical simulation
-to study how the clustering of galaxies depends on their assembly
-time.
-We performed the analysis in the mass range $10^{9}$\Msunh $\leq
-M_{\star} \leq 10^{11.5}$ for the whole galaxy population and
-separately for centrals and satellites.
+to study how the clustering of galaxies depends on their stellar mass assembly
+properites.
+We performed the analysis in the stellar mass range $10^{9}$\Msunh
+$\leq M_{\star} \leq 10^{11.5}$ for the whole galaxy population and
+separately for centrals and satellites. 
 
-Using the 2-point correlation function, 
+Using the 2-point correlation function on scales of $1-5$\Mpch, 
 we computed the relative bias to  quantified the clustering-age
 dependence for galaxies at fixed stellar mass.
 Early-assembly galaxies tend to be more clustered than late-assembly galaxies.
 This trend is stronger towards lower stellar masses below a mass
 treshold of $(6\pm1)\times 10^{10}$ \Msunh.  
-The strengt of the relative bias is similar for satellites and
-centrals. 
+The strengt of this effect is similar for satellites and centrals. 
 We showed that the specific star formation cuts cannot reproduce those
 trends, while the $(g-r)$ colour cuts can. 
 
-Our results could be observationally verified with a high degree of
-accuracy with the Dark Energy Spectroscopic Instrument (DESI).
+An observational verification of our results from colour cuts at
+fixed stellar mass would be best done with spectroscopic
+measurements. 
+This would allow at the same time: 1) a good stellar mass estimate,
+2) a colour mesurement and 3) a position estimate to compute the
+correlation function.
+A further observational exploration of the trends for satellites and
+centrals would require a grouping algorithm.
+
+This could be achieved with with the Dark Energy Spectroscopic
+Instrument (DESI) \citep{2016arXiv161100036D}. 
 DESI includes a Bright Galaxy Survey that will take spectra of
-10 million galaxies.
-It will including targets with an apparent $r$-band magnitude brighter
+10 million galaxies 
+It will include  targets with an apparent $r$-band magnitude brighter
 than $19.5$, approximately 2 magnitudes deeper than the SDSS
 main survey.  
-This means that DESI will produce a complete survey for galaxies with
+This means that DESI can produce a complete survey for galaxies with
 stellar masses $10^{9}$\Msunh within a distance of $\approx 200$
 \Mpch. 
+The biggest challenge to accurately measuring the assembly bias effect
+from the relative bias measurements it the  correct interpreting and
+correction of the incompletness due to fibre positioner collisions
+\citep{2019MNRAS.484.1285S}.  
 
 
 \section*{Data availability}
